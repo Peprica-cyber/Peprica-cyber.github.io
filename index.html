@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>흠...</title>
+        <meta charset="utf-8" />
+        <style>
+            .btn{
+                color: aqua;
+                background-color: red;
+                border:none;
+                border-radius: 12px;
+                cursor: pointer;
+            }
+            .btn:hover {
+                background-color: rgb(172, 22, 22);
+            }
+            a {
+                color: darkgoldenrod;
+            }
+        </style>
+        <script>
+            let id;
+            let n = 0;
+            let colors = [
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "blue",
+                "purple"
+            ];
+            function boom() {
+                clearInterval(id);
+                    let msg = document.getElementById("msg");
+                    msg.innerText = "폭8은 예술이다! ";
+                    id = setInterval(function() {
+                    msg.innerText += "폭8은 예술이다! ";
+                    msg.style.color="white";
+                    msg.style.backgroundColor = colors[n];
+                    n++;
+                    if(n >= colors.length){
+                        n = 0;
+                    }
+                }, 10);
+            }
+            function end() {
+                clearInterval(id);
+            }
+        </script>
+    </head>
+    <body style="background-image:url('슥슥.png');color:darkorange;font-weight: bold;">
+        <div style="text-align: center">
+        <h1 style="color: skyblue;background-color: tomato">
+            슥슥이 사이트에 오신 걸 환영합니다
+        </h1>
+        <p>
+            아래의 버튼은 
+            <a href="https://namu.wiki/w/%ED%8F%AD%EB%B0%9C" target="_blank" title="폭8은 예술이다!">폭8</a>
+            버튼입니다
+        </p>
+        <button class="btn" onclick="boom()" style="padding:20px;font-size:50px;">
+            <b>폭8</b>
+        </button>
+        <h3 style="text-align:left">저 버튼의 장점</h3>
+        <ol style="text-align:left">
+            <li>재밌음</li>
+            <li>흠...</li>
+        </ol>
+        <h3><a href="second.html">다음 페이지</a></h3>
+        <img src="wnajr.png" width="20%">
+        </div>
+        <div style="text-align: right;color:white">
+        <button style="padding:10px" onclick="end()">
+            <b>X</b>
+        </button>
+        </div>
+        <p id="msg">
+
+        </p>
+    </body>
+</html>

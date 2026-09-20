@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>민지후의 두 웹</title>
+        <title>두 웹</title>
         <meta charset="utf-8" />
+        <style>
+            .btn{
+                color: darkorchid;
+                background-color: #2fea23;
+                border:none;
+                border-radius: 12px;
+                cursor: pointer;
+            }
+            .btn:hover {
+                background-color: sandybrown;
+            }
+        </style>
+        <script>
+            let id;
+            let n = 0;
+            let colors = [
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "blue",
+                "purple"
+            ];
+            function boom() {
+                clearInterval(id);
+                    id = setInterval(function() {
+                    document.body.style.color="white";
+                    document.body.style.backgroundColor = colors[n];
+                    n++;
+                    if(n >= colors.length){
+                        n = 0;
+                    }
+                }, 100);
+            }
+        </script>
     </head>
     <body>
-        <h1>
+        <div style="text-align: center">
+        <h1 style="color:#ffffff;background-color: #a82f31">
             엌ㅋ
         </h1>
         <p>
@@ -13,15 +49,22 @@
             <a href="https://namu.wiki/w/%EC%8A%A5%EC%8A%A5%EC%9D%B4" target="_blank" title="스윽스윽이">슥슥이</a>
             버튼입니다
         </p>
-        <button>
+        <button class="btn" style="padding:15px;font-size:32px;font-weight:700;" 
+            onclick="location.href='https://www.youtube.com/@ssgssg2/videos'">
+
             슥스스ㅡㄱ슥스슥슥스스스스그ㅡ스그스ㅡ슥
         </button>
-        <h3>저 버튼의 장점</h3>
-        <ol>
+        <h3 style="text-align:left">저 버튼의 장점</h3>
+        <ol style="text-align:left">
             <li>옻오오옻</li>
             <li>슥창</li>
         </ol>
         <h3><a href="Untitled-1.html">이전 페이지</a></h3>
+        <h3><a href="third.html">다음 페이지</a></h3>
         <img src="스크린샷 2026-09-13 122409.png" width="20%">
+        </div>
+        <script>
+            boom();
+        </script>
     </body>
 </html>

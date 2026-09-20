@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>방명록</title>
+<script>
+      function writeGuest() {
+        let text =
+        document.getElementById("guestInput").value;
+ 
+        if(text == "") {
+          return;
+        }
+document.getElementById("guestBook").innerHTML
++= "<p>" + text + "</p>";
+ 
+document.getElementById("guestInput").value = "";
+}
+</script>
+  </head>
+  <body>
+    <h3><a href="second.html">이전 페이지</a></h3>
+    <h2>방명록</h2>
+    <input id="guestInput" placeholder="아무말이나 하셈">
+    <button onclick="writeGuest()">
+      작성
+    </button>
+    <div id="guestBook"></div>
+    
+  </body>
+</html>
